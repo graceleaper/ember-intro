@@ -22,4 +22,5 @@ Router.map(function() {
     // get a single post -- format the route
     this.route('post', {path: ':post_id'}) // localhost:4200/posts/2
   })
+  this.route('events');
 });
