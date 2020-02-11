@@ -19,6 +19,7 @@ Router.map(function() {
     this.route('new')
     this.route('post', {path: 'post_id'})
   })
-  
+
   this.route('events');
+  this.route('post');
 });

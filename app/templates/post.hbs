@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<p>{{body}}</p>
+
+<h2><strong>Authors:</strong></h2>
+
+<!--Use each block helper-->
+<ul>
+    {{#each authors as |author|}}
+        <li>{{author}}</li>
+    {{/each}}
+</ul>
+
+<h3>Comments</h3>
+
+<ul>
+{{#each comments as |comment|}}
+    <li>{{comment.name}} - {{comment.comment}}</li>
+{{/each}}
+</ul>
