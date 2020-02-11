@@ -6,6 +6,11 @@
 * `cd ember-practice`
 * `npm install`
 
+## Branches
+* master (Creating Routes and Templates)
+* 02-linking-routes-and-layouts
+* 03-controllers-and-data-binding
+
 ## Notes
 
 - Create routes in 'routes.js' file in the 'app' directory
