@@ -1,32 +1,31 @@
-# Ember Introduction
-
-Based on Udemy course 'Build Web Apps Using EmberJS: The Complete Course'
+# Creating Routes and Templates
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd myapp`
+* `cd ember-practice`
 * `npm install`
 
-## Running / Development
+## Notes
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+- Create routes in 'routes.js' file in the 'app' directory
+- Example of a route:
 
-### Code Generators
+```
+Router.map(function() {
+  this.route('about')
+})
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+Argument in 'this.route' is name of a template
 
-### Running Tests
+- Create templates in 'templates' directory (also in 'app' directory). Template will have an .hbs extension
+- The default 'application.hbs' file in the 'templates' directory is where we would normally put our header, navigation, and anything else that we want to appear throughout the app / on every single page
+- We can redirect to a new template based on a particular route. Following code will go in Route.map() method:
 
-* `ember test`
-* `ember test --server`
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+```
+  this.route('posts', function() {
+    this.route('new')
+  })
+```
+- To make templates for the above routes, go to 'templates' directory, add a 'posts' directory. And add the following files: 'index.hbs', 'new.hbs'

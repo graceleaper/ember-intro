@@ -7,20 +7,16 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  // this.route('about, {path:'about-me'});
-  this.route('about');
-  this.route('services');
-  this.route('contact');
+  this.route('about')
+    /*
+      for above line, we can also have: this.route('about', {path: 'about'})
+      since the path name and template name are the same
+    */
+  this.route('services')
+  this.route('contact')
 
-  /*
-    the 'posts' template in the 'templates' directory
-    has an index.hbs file, which is the 'posts' template
-    itself
-  */
-  this.route('posts', {path:'/posts'}, function() {
-    this.route('new'); // localhost:4200/posts/new
-    // get a single post -- format the route
-    this.route('post', {path: ':post_id'}) // localhost:4200/posts/2
+  this.route('posts', function() {
+    this.route('new')
+    this.route('post', {path: 'post_id'})
   })
-  this.route('events');
 });
