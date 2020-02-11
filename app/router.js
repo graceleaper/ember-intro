@@ -8,10 +8,10 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('about')
-    /*
-      for above line, we can also have: this.route('about', {path: 'about'})
-      since the path name and template name are the same
-    */
+  /*
+    for above line, we can also have: this.route('about', {path: 'about'})
+    since the path name and template name are the same
+  */
   this.route('services')
   this.route('contact')
 
@@ -19,4 +19,6 @@ Router.map(function() {
     this.route('new')
     this.route('post', {path: 'post_id'})
   })
+  
+  this.route('events');
 });

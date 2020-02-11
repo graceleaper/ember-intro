@@ -1,1 +1,8 @@
 <h1>Services</h1>
+
+<!-- Looping through model that is attached to the 'services' route (from '../routes/services.js') -->
+<ul>
+    {{#each model as |service| }}
+        <li>{{service}}</li>
+    {{/each}}
+</ul>

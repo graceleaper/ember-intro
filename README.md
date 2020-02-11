@@ -1,4 +1,4 @@
-# Creating Routes and Templates
+# Linking Routes & Layouts
 
 ## Installation
 
@@ -8,24 +8,23 @@
 
 ## Notes
 
-- Create routes in 'routes.js' file in the 'app' directory
-- Example of a route:
-
+- In 'application.hbs' template in the 'templates' directory, set up navigation like:
 ```
-Router.map(function() {
-  this.route('about')
-})
+<li>{{#link-to 'index'}}Home{{/link-to}}</li>
+<li>{{#link-to 'about'}}About{{/link-to}}</li>
 ```
+- Above, route names come after the first #link-to
 
-Argument in 'this.route' is name of a template
+- When we open up inspector on our browser, we can see the elements with class names on the <li> elements we created above. So we can begin using CSS! See 'styles' directory's 'app.css' file
 
-- Create templates in 'templates' directory (also in 'app' directory). Template will have an .hbs extension
-- The default 'application.hbs' file in the 'templates' directory is where we would normally put our header, navigation, and anything else that we want to appear throughout the app / on every single page
-- We can redirect to a new template based on a particular route. Following code will go in Route.map() method:
+- To attach a model to a route: in 'routes' directory, create something like 'services.js' file. In the file, we'll create a model that will contain an array of items in this case. Then, the /services rout can make use of this array
 
-```
-  this.route('posts', function() {
-    this.route('new')
-  })
-```
-- To make templates for the above routes, go to 'templates' directory, add a 'posts' directory. And add the following files: 'index.hbs', 'new.hbs'
+- We can make use of this model in the 'services.hbs' template
+
+- We can use a 'generator' to generate/create a new route:
+`ember g route name-of-route`
+
+- Using a generator will create the following:
+* name-of-route.js in 'routes' directory
+* name-of-route.hbs in 'templates' directory
+* 'this.route('name-of-route')' in the main route.js file
