@@ -7,11 +7,17 @@
 * `npm install`
 
 ## Branches
+
+### Routing with Ember
 * [master - Creating Routes and Templates](https://github.com/graceleaper/ember-intro/tree/master)
 * [02-linking-routes-and-layouts](https://github.com/graceleaper/ember-intro/tree/02-linking-routes-and-layouts)
+
+### Templates & Controllers
 * [03-controllers-and-data-binding](https://github.com/graceleaper/ember-intro/tree/03-controllers-and-data-binding)
 * [04-controllers-and-actions](https://github.com/graceleaper/ember-intro/tree/04-controllers-and-actions)
 * [05-writing-helpers](https://github.com/graceleaper/ember-intro/tree/05-writing-helpers)
+
+### Models & Data
 
 ## Notes
 
