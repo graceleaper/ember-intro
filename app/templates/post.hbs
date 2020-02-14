@@ -13,6 +13,12 @@
 
 <h3>Comments</h3>
 
+<!--
+    'comments' is the name of the property (or in this case, array)
+    from the controller object. 'comment' is the element
+    (or in this case, object) from the 'comments' array
+-->
+
 <ul>
 {{#each comments as |comment|}}
     <li>{{comment.name}} - {{comment.comment}}</li>
