@@ -1,6 +1,12 @@
 <h1>{{title}}</h1>
 
+<!-- Notice that name of the action is in quotes -->
+<button {{action 'sayHello'}}>Say Hello</button>
+<button {{action 'toggleBody'}}>About this blog post</button>
+
+{{#if isShowingBody}}
 <p>{{body}}</p>
+{{/if}}
 
 <h2><strong>Authors:</strong></h2>
 
@@ -24,3 +30,14 @@
     <li>{{comment.name}} - {{comment.comment}}</li>
 {{/each}}
 </ul>
+
+<!-- only fire event when we have a button submitted-->
+<form {{action 'submitAction' on='submit'}}>
+    <p>
+        Name: {{input value=name}}
+    </p>
+    <p>
+        Comment: {{textarea value=comment}}
+    </p>
+    <button type="submit">Submit</button>
+</form>
