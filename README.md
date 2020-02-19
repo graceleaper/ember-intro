@@ -19,4 +19,4 @@ export default Ember.Helper.helper(getDate)
 ```
 - Then, on 'post.hbs' template:
 `<p>Created on {{get-date}}</p>`
-- Notice that we're making use of the file name, and NOT the name of the function (getDate)
+- Notice that we're making use of the file name (get-date.js), and NOT the name of the function (getDate)
